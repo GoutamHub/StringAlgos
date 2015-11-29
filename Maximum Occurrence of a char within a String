@@ -1,0 +1,39 @@
+//
+//  main.cpp
+//  MAX_occuring_char_in_string
+//
+//  Created by goutdas on 29/11/15.
+//  Copyright © 2015 goutdas. All rights reserved.
+//
+
+#include <iostream>
+#include <string.h>
+#define ASCII_SIZE 256
+using namespace std;
+
+char getmaxoccurenece(char* string){
+    
+    int count[ASCII_SIZE] = {0};
+    int max = -1;
+    long length = strlen(string);
+    char c = '\0';
+    
+    for (int j =0 ; j<= length; j++) {
+        count[string[j]]++;
+        if (max < count[string[j]]) {
+            max = count[string[j]];
+            c = string[j];
+        }
+        
+    }
+    return c;
+    
+}
+
+
+int main(int argc, const char * argv[]) {
+    char input_string[] = "esst strrrrrrrrrrrrrrrring";
+    char ch = getmaxoccurenece(input_string);
+    cout << "The maximum occurence here : " << ch << endl;
+    return 0;
+}
