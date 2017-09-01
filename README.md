@@ -1,2 +1,2 @@
 # StringAlgos
-Consists of String algorithms made in c and cpp
+String algorithms mostly in Java and C++ 
